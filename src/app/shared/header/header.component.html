@@ -1,0 +1,23 @@
+<header class="site-header" [class.menu-open]="isMenuOpen" [class.scrolled]="isScrolled">
+  <div class="container header-inner">
+    <a class="brand" routerLink="/" aria-label="Jeevan Foundation Trust home" (click)="closeMenu()">
+      <img src="assets/images/transparent2.png" alt="Jeevan Foundation Trust logo" />
+    </a>
+
+    <button class="menu-toggle" type="button" [attr.aria-expanded]="isMenuOpen" aria-controls="mobile-nav" (click)="toggleMenu()" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a *ngFor="let item of navItems" [routerLink]="item.link" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: item.exact }" (click)="closeMenu()">{{ item.label }}</a>
+      <a class="donate-button" routerLink="/donate" (click)="closeMenu()">Donate Now</a>
+    </nav>
+  </div>
+
+  <nav id="mobile-nav" class="mobile-nav" [class.open]="isMenuOpen" aria-label="Mobile navigation">
+    <a *ngFor="let item of navItems" [routerLink]="item.link" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: item.exact }" (click)="closeMenu()">{{ item.label }}</a>
+    <a class="donate-button" routerLink="/donate" (click)="closeMenu()">Donate Now</a>
+  </nav>
+</header>

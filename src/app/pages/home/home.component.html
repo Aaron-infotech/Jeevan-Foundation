@@ -1,0 +1,125 @@
+<section class="hero-section">
+  <div class="container hero-grid">
+    <div class="hero-copy" appReveal="up">
+      <span class="eyebrow">Jeevan Foundation Trust</span>
+      <h1>
+        <span class="hero-heading-lead">A brighter future</span>
+        <span class="hero-heading-highlight">starts with all of us.</span>
+      </h1>
+      <p class="tagline">Compassion in action. Opportunity for all.</p>
+      <p class="description">Jeevan Foundation Trust is committed to uplifting underserved communities, promoting equal opportunities, and supporting people in need through social welfare, education, healthcare awareness, and sustainable livelihood initiatives.</p>
+      <div class="cta-row">
+        <a routerLink="/activities" class="primary-btn">Explore Our Activities</a>
+        <a routerLink="/donate" class="secondary-btn">Donate Now</a>
+      </div>
+    </div>
+    <div class="hero-visual" appReveal="right" [revealDelay]="120">
+      <div class="image-card">
+        <img src="assets/images/GroupPhoto2.jpeg" alt="Women from the community coming together" />
+      </div>
+      <div class="image-card hero-image-inset">
+        <img src="assets/images/GroupPhoto1.jpeg" alt="Children receiving education support" />
+      </div>
+      <div class="hero-note">
+        <span class="hero-note-icon" aria-hidden="true">✦</span>
+        <span><strong>Care that reaches everyone</strong><small>Growing stronger, together.</small></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="intro-section">
+  <div class="container intro-grid">
+    <div class="intro-copy" appReveal="left">
+      <span class="section-kicker">Who we are</span>
+      <h2>Making a Difference, One Life at a Time</h2>
+      <p>Established in August 2025, Jeevan Foundation Trust is a public charitable trust based in Karadiputhur, Uthukkottai Taluk, Tiruvallur District, Tamil Nadu. Our initiatives focus on women empowerment, healthcare outreach, child welfare, disability inclusion, rural livelihoods, senior citizen care, and legal rights awareness.</p>
+      <a routerLink="/about-us" class="primary-btn small-btn">Learn More</a>
+    </div>
+    <div class="intro-image" appReveal="right" [revealDelay]="100">
+      <img src="assets/images/CW-9.jpeg" alt="Children receiving support from the foundation" />
+    </div>
+  </div>
+</section>
+
+<section class="focus-section">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <span class="section-kicker">Our focus</span>
+      <h2>Our Key Initiatives</h2>
+      <p>Every community has unique needs. Our focus areas are designed to encourage dignity, opportunity, inclusion, and sustainable development.</p>
+    </div>
+    <div class="card-grid activities-grid">
+      <article *ngFor="let item of activities; let i = index" class="info-card activity-card" appReveal="up" [revealDelay]="(i % 3) * 90">
+        <img [src]="item.image" [alt]="item.title" />
+        <div class="card-body">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.shortDescription }}</p>
+          <a [routerLink]="'/activities'">Learn More</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="mission-section">
+  <div class="container mission-grid">
+    <div class="mission-box" appReveal="left">
+      <div class="icon">🎯</div>
+      <h3>Our Mission</h3>
+      <p>To empower underserved communities through social welfare, education, healthcare outreach, inclusion, and sustainable livelihood opportunities.</p>
+    </div>
+    <div class="mission-box alt" appReveal="right" [revealDelay]="100">
+      <div class="icon">🌟</div>
+      <h3>Our Vision</h3>
+      <p>To build an inclusive and compassionate society where every individual has the opportunity to live with dignity and participate in community development.</p>
+    </div>
+  </div>
+</section>
+
+<section class="values-section">
+  <div class="container">
+    <div class="section-head center" appReveal>
+      <span class="section-kicker">What guides us</span>
+      <h2>Our Core Values</h2>
+    </div>
+    <div class="card-grid values-grid">
+      <article *ngFor="let item of values; let i = index" class="info-card value-card" appReveal="up" [revealDelay]="i * 90">
+        <div class="icon-circle">{{ item.icon }}</div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="impact-section">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <span class="section-kicker">Community care</span>
+      <h2>Small Acts of Kindness Can Create Lasting Change</h2>
+      <p>Through community participation and collective responsibility, we aim to create opportunities, strengthen support systems, and improve the well-being of underserved people.</p>
+    </div>
+    <div class="card-grid impact-grid">
+      <article *ngFor="let item of focusAreas; let i = index" class="info-card impact-card" appReveal="up" [revealDelay]="i * 90">
+        <div class="impact-icon">{{ item.icon }}</div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="join-section">
+  <div class="container join-grid" appReveal="up">
+    <div>
+      <span class="section-kicker">Get involved</span>
+      <h2>Together, We Can Create Change</h2>
+      <p>Your time, skills, encouragement, and financial support can help us reach communities that need assistance. Join us in building a more inclusive and compassionate society.</p>
+    </div>
+    <div class="cta-row end">
+      <a routerLink="/donate" class="primary-btn">Support Our Mission</a>
+      <a routerLink="/contact" class="secondary-btn">Contact Us</a>
+    </div>
+  </div>
+</section>

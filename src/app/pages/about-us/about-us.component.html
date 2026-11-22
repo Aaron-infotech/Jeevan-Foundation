@@ -1,0 +1,62 @@
+<app-page-banner title="About Us" description="Jeevan Foundation Trust works at the grassroots level to support humanitarian relief, healthcare outreach, education, women empowerment, disability inclusion, rural livelihoods, senior citizen welfare, and legal rights awareness." image="assets/images/C-1.jpeg"></app-page-banner>
+
+<section class="content-section">
+  <div class="container two-column">
+    <div appReveal="left">
+      <span class="section-kicker">Who we are</span>
+      <h2>About Jeevan Foundation Trust</h2>
+      <p>Jeevan Foundation Trust is a public charitable trust established in August 2025 and based in Karadiputhur, Uthukkottai Taluk, Tiruvallur District, Tamil Nadu.</p>
+      <p>The trust works at the grassroots level to support humanitarian relief, healthcare outreach, education, women empowerment, disability inclusion, rural livelihoods, senior citizen welfare, and legal rights awareness.</p>
+      <p>We believe in equal opportunity, inclusive dignity, and community-led progress regardless of caste, religion, gender, economic status, or background.</p>
+    </div>
+    <div class="image-panel" appReveal="right" [revealDelay]="100" aria-label="Community outreach and education">
+      <img src="assets/images/GroupPhoto2.jpeg" alt="Women from the community coming together" />
+      <img src="assets/images/CW-1.jpeg" alt="Children receiving welfare support" />
+      <img src="assets/images/E-1.jpeg" alt="A child receiving education support" />
+    </div>
+  </div>
+</section>
+
+<section class="story-section">
+  <div class="container mission-grid">
+    <div class="story-card" appReveal="left">
+      <h3>Our Vision</h3>
+      <p>To build an inclusive and compassionate society where every person has access to opportunities, essential support, and the resources needed to live with dignity.</p>
+    </div>
+    <div class="story-card" appReveal="right" [revealDelay]="100">
+      <h3>Our Mission</h3>
+      <p>To empower underserved communities through social welfare initiatives, education, healthcare awareness, inclusive development, and sustainable livelihood opportunities.</p>
+    </div>
+  </div>
+</section>
+
+<section class="content-section office-section">
+  <div class="container office-shell">
+    <div appReveal="up">
+      <span class="section-kicker">Registered office</span>
+      <h2>Jeevan Foundation Trust</h2>
+      <p>No. 1/99, Perumal Koil Street, Karadiputhur, Uthukkottai Taluk, Tiruvallur District, Tamil Nadu – 601202.</p>
+      <p><strong>Registration Reference:</strong> Book-4 / Doc No. 20/2025 (SRO Uthukkottai).</p>
+      <!-- <a href="https://www.google.com/maps/search/?api=1&query=No.+1%2F99%2C+Perumal+Koil+Street%2C+Karadiputhur%2C+Uthukkottai+Taluk%2C+Tiruvallur+District%2C+Tamil+Nadu+601202" target="_blank" rel="noreferrer" class="primary-btn small-btn">Get Directions</a> -->
+    </div>
+    <figure class="office-image" appReveal="right" [revealDelay]="100">
+      <img src="assets/images/C-1.jpeg" alt="Community members supporting senior citizens" />
+      <figcaption>Working together for a stronger, more caring community.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="content-section trustees-section">
+  <div class="container">
+    <div class="section-head center" appReveal>
+      <span class="section-kicker">Leadership</span>
+      <h2>Leadership and Board of Trustees</h2>
+    </div>
+    <div class="card-grid trustees-grid">
+      <article *ngFor="let trustee of trustees; let i = index" class="info-card trustee-card" appReveal="up" [revealDelay]="i * 80">
+        <h3>{{ trustee.name }}</h3>
+        <p>{{ trustee.role }}</p>
+      </article>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,122 @@
+<app-page-banner title="Donate Now" description="Every contribution can help strengthen community support, expand opportunities, and bring hope to people facing difficult circumstances." image="assets/images/F-1.jpeg"></app-page-banner>
+
+<section class="donation-section">
+  <div class="container donation-grid">
+    <div class="donate-hero" appReveal="left">
+      <span class="section-kicker">Support our mission</span>
+      <h2>Your Support Can Make a Difference</h2>
+      <p>Every contribution can help strengthen community support, expand opportunities, and bring hope to people facing difficult circumstances. Your generosity can support the mission of Jeevan Foundation Trust and its social welfare initiatives.</p>
+      <img src="assets/images/SE.jpeg" alt="Community members receiving support" />
+    </div>
+
+    <div class="donation-form-panel" appReveal="right" [revealDelay]="100">
+      <section class="payment-details" aria-labelledby="payment-heading">
+        <div>
+          <span class="section-kicker">Ways to contribute</span>
+          <h2 id="payment-heading">Donate by QR or bank transfer</h2>
+          <img class="donation-qr" src="assets/images/donation-qr.jpeg" alt="Jeevan Foundation Trust UPI payment QR code" />
+          <a class="download-qr" href="assets/images/donation-qr-code.png" download="jeevan-foundation-qr.png">Download QR code</a>
+          <p class="download-help">Save the QR image, then select it in your UPI app.</p>
+          <p class="upi-id">UPI ID: <strong>jeevantrust&#64;indianbk</strong></p>
+        </div>
+        <dl class="bank-details">
+          <div>
+            <dt>Account name</dt>
+            <dd>Jeevan Foundation Trust</dd>
+          </div>
+          <div>
+            <dt>Bank</dt>
+            <dd>Indian Bank</dd>
+          </div>
+          <div>
+            <dt>Account number</dt>
+            <dd>8239558068</dd>
+          </div>
+          <div>
+            <dt>IFSC code</dt>
+            <dd>IDIB000P114</dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- <form [formGroup]="donationForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="field-group">
+          <label for="name">Name</label>
+          <input id="name" type="text" formControlName="name" placeholder="Enter your name" />
+          <small *ngIf="name?.touched && name?.errors?.['required']">Please enter your name.</small>
+          <small *ngIf="name?.touched && name?.errors?.['minlength']">Name should be at least 2 characters long.</small>
+        </div>
+
+        <div class="field-group">
+          <label>Donation Amount</label>
+          <div class="amount-options">
+            <button type="button" *ngFor="let amount of quickAmounts" class="amount-pill" [class.selected]="donationForm.get('amount')?.value === amount" (click)="setQuickAmount(amount)">
+              ₹{{ amount }}
+            </button>
+          </div>
+          <input type="number" formControlName="amount" min="1" placeholder="Custom amount" />
+          <small *ngIf="amount?.touched && amount?.errors?.['required']">Please enter a donation amount.</small>
+          <small *ngIf="amount?.touched && amount?.errors?.['min']">Donation amount must be greater than zero.</small>
+        </div>
+
+        <div class="field-group ack-row">
+          <label class="checkbox-wrap">
+            <input type="checkbox" formControlName="acknowledgement" />
+            <span>I understand that this form does not process payments. I will make my donation using the QR code or bank details above.</span>
+          </label>
+          <small *ngIf="donationForm.get('acknowledgement')?.touched && donationForm.get('acknowledgement')?.errors?.['required']">Please confirm this acknowledgement.</small>
+        </div>
+
+        <button class="submit-btn" type="submit" [disabled]="isSubmitting">
+          <span *ngIf="!isSubmitting">Donate Now</span>
+          <span *ngIf="isSubmitting">Processing...</span>
+        </button>
+
+        <div class="form-status" *ngIf="formMessage" [ngClass]="messageType">
+          {{ formMessage }}
+        </div>
+      </form> -->
+    </div>
+  </div>
+</section>
+
+<section class="purpose-section">
+  <div class="container">
+    <div class="section-head center" appReveal>
+      <span class="section-kicker">Impact areas</span>
+      <h2>Your Contribution Can Support</h2>
+    </div>
+    <div class="card-grid purpose-grid">
+      <article class="purpose-card" appReveal="up">
+        <h3>Child Welfare and Education</h3>
+        <p>Supporting safe learning environments, educational resources, and child-focused care.</p>
+      </article>
+      <article class="purpose-card" appReveal="up" [revealDelay]="80">
+        <h3>Healthcare and Community Wellness</h3>
+        <p>Helping improve access to health awareness and preventive care for underserved communities.</p>
+      </article>
+      <article class="purpose-card" appReveal="up" [revealDelay]="160">
+        <h3>Women Empowerment</h3>
+        <p>Strengthening confidence, leadership, and livelihood opportunities for women and families.</p>
+      </article>
+      <article class="purpose-card" appReveal="up" [revealDelay]="80">
+        <h3>Disability Inclusion</h3>
+        <p>Supporting access, dignity, and inclusion for persons with disabilities.</p>
+      </article>
+      <article class="purpose-card" appReveal="up" [revealDelay]="160">
+        <h3>Rural Livelihood Development</h3>
+        <p>Promoting sustainable income opportunities and skills for rural communities.</p>
+      </article>
+      <article class="purpose-card" appReveal="up" [revealDelay]="240">
+        <h3>Humanitarian Assistance</h3>
+        <p>Providing support during emergencies and for vulnerable people in crisis situations.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="transparency-section">
+  <div class="container transparency-box" appReveal="up">
+    <p>Jeevan Foundation Trust is committed to supporting community welfare and inclusive development. Donors should retain their payment confirmation for their records. Official receipts and any applicable tax benefits depend on the trust's verified legal and tax status.</p>
+  </div>
+</section>

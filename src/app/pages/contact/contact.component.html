@@ -1,0 +1,65 @@
+<app-page-banner
+  title="Contact Us"
+  description="Have a question, want to volunteer, or looking to support our work? We would be glad to hear from you."
+  image="assets/images/GroupPhoto2.jpeg">
+</app-page-banner>
+
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-intro" appReveal="up">
+      <span class="section-kicker">Let’s connect</span>
+      <h2>We’re here to help</h2>
+      <p>Reach out to Jeevan Foundation Trust. Our team welcomes enquiries about our initiatives, volunteering, and community support.</p>
+    </div>
+
+    <div class="contact-layout">
+      <div class="contact-details">
+        <article class="contact-card" appReveal="left">
+          <span class="contact-icon" aria-hidden="true">✉</span>
+          <div>
+            <h3>Email us</h3>
+            <p>For questions and enquiries</p>
+            <a href="mailto:jeevanfoundtrust2025&#64;gmail.com">jeevanfoundtrust2025&#64;gmail.com</a>
+          </div>
+        </article>
+
+        <article class="contact-card" appReveal="left" [revealDelay]="80">
+          <span class="contact-icon green" aria-hidden="true">☎</span>
+          <div>
+            <h3>Call us</h3>
+            <p>Speak with our team</p>
+            <a href="tel:7010151843">7010151843</a>
+          </div>
+        </article>
+
+        <article class="contact-card address-card" appReveal="left" [revealDelay]="160">
+          <span class="contact-icon" aria-hidden="true">⌖</span>
+          <div>
+            <h3>Visit our office</h3>
+            <p>No. 1/99, Perumal Koil Street, Karadiputhur, Uthukkottai Taluk, Tiruvallur District, Tamil Nadu – 601202.</p>
+            <!-- <a
+              href="https://www.google.com/maps/search/?api=1&amp;query=No.+1%2F99%2C+Perumal+Koil+Street%2C+Karadiputhur%2C+Uthukkottai+Taluk%2C+Tiruvallur+District%2C+Tamil+Nadu+601202"
+              target="_blank"
+              rel="noreferrer">
+              Get directions <span aria-hidden="true">↗</span>
+            </a> -->
+          </div>
+        </article>
+      </div>
+
+      <aside class="contact-visual" appReveal="right" [revealDelay]="120">
+        <img
+          src="assets/images/G-1.jpeg"
+          alt="Community members supporting one another"
+          loading="lazy" />
+        <div class="contact-visual-caption">
+          <span class="section-kicker">Jeevan Foundation Trust</span>
+          <h3>Stronger communities start with a conversation.</h3>
+          <a href="mailto:jeevanfoundtrust2025&#64;gmail.com?subject=Contact%20Jeevan%20Foundation%20Trust" class="contact-cta">
+            Send us an email <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,49 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-column brand-column" appReveal="up">
+      <img src="assets/images/transparent2.png" alt="Jeevan Foundation Trust logo" class="footer-logo" />
+      <h3>Jeevan Foundation Trust</h3>
+      <p class="tagline">Empowering Communities, Transforming Lives.</p>
+      <p>We work toward a more inclusive society through social welfare, education, healthcare awareness, community support, and sustainable development initiatives.</p>
+    </div>
+
+    <div class="footer-column" appReveal="up" [revealDelay]="80">
+      <h4>Quick Links</h4>
+      <ul>
+        <li *ngFor="let item of quickLinks">
+          <a [routerLink]="item.link" *ngIf="item.link.startsWith('/')">{{ item.label }}</a>
+          <a [href]="item.link" *ngIf="!item.link.startsWith('/')">{{ item.label }}</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-column" appReveal="up" [revealDelay]="160">
+      <h4>Contact Information</h4>
+      <ul>
+        <li><a href="mailto:jeevanfoundtrust2025&#64;gmail.com">jeevanfoundtrust2025&#64;gmail.com</a></li>
+        <li><a href="tel:7010151843">7010151843</a></li>
+        <li> No. 1/99, Perumal Koil Street, Karadiputhur, Uthukkottai Taluk, Tiruvallur District, Tamil Nadu – 601202.</li>
+      </ul>
+    </div>
+
+    <div class="footer-column" appReveal="up" [revealDelay]="240">
+      <h4>Get Involved</h4>
+      <ul>
+        <li *ngFor="let item of involvementLinks">
+          <a [routerLink]="item.link" *ngIf="item.link.startsWith('/')">{{ item.label }}</a>
+          <a [href]="item.link" *ngIf="!item.link.startsWith('/')">{{ item.label }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>© {{ currentYear }} Jeevan Foundation Trust. All rights reserved.</p>
+      <div class="legal-links">
+        <a routerLink="/privacy-policy">Privacy Policy</a>
+        <a routerLink="/terms">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>

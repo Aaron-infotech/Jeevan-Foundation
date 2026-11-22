@@ -1,0 +1,58 @@
+<app-page-banner title="Gallery" description="Explore community support, child welfare, education, and flood relief initiatives." image="assets/images/GroupPhoto1.jpeg"></app-page-banner>
+
+<section class="gallery-section" id="gallery-top">
+  <div class="container">
+    <div class="gallery-filters" aria-label="Filter gallery by activity">
+      <button
+        *ngFor="let category of galleryCategories"
+        type="button"
+        class="filter-button"
+        [class.active]="activeCategory === category"
+        [attr.aria-pressed]="activeCategory === category"
+        (click)="selectCategory(category)">
+        {{ category }}
+      </button>
+    </div>
+
+    <div class="gallery-grid">
+      <article *ngFor="let image of visibleImages; let i = index" class="gallery-item" appReveal="zoom" [revealDelay]="(i % 4) * 60">
+        <button type="button" class="gallery-button" (click)="openLightbox(image)" [attr.aria-label]="'View ' + image.title">
+          <img [src]="image.image" [alt]="image.title" loading="lazy" (error)="onImageError($event)" />
+          <span class="caption">{{ image.title }}</span>
+        </button>
+      </article>
+    </div>
+
+    <div class="pagination" *ngIf="getTotalPages() > 1">
+      <button type="button" (click)="showPrevious()" [disabled]="currentPage === 1" aria-label="Previous page">Previous</button>
+      <button type="button" *ngFor="let page of pageNumbers" (click)="changePage(page)" [class.active]="page === currentPage" [attr.aria-label]="'Page ' + page">{{ page }}</button>
+      <button type="button" (click)="showNext()" [disabled]="currentPage === getTotalPages()" aria-label="Next page">Next</button>
+    </div>
+
+    <div class="gallery-more">
+      <a
+        class="gallery-more-link"
+        href="https://drive.google.com/drive/folders/1qgs_v4rwmSgjW-_V9RYjlAUqqfuyOMu3?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer">
+        View More Welfare Photos
+        <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" *ngIf="selectedImage" aria-modal="true" role="dialog" aria-labelledby="lightbox-title" (click)="closeLightbox()">
+  <div class="lightbox-dialog" (click)="$event.stopPropagation()">
+    <button type="button" class="close-button" (click)="closeLightbox()" aria-label="Close gallery image">×</button>
+    <img [src]="selectedImage.image" [alt]="selectedImage.title" (error)="onImageError($event)" />
+    <div class="lightbox-content">
+      <h3 id="lightbox-title">{{ selectedImage.title }}</h3>
+      <p>{{ selectedImage.description }}</p>
+      <div class="lightbox-controls">
+        <button type="button" (click)="navigateLightbox(-1)" [disabled]="getSelectedImageIndex() === 0">Previous</button>
+        <button type="button" (click)="navigateLightbox(1)" [disabled]="getSelectedImageIndex() === filteredImages.length - 1">Next</button>
+      </div>
+    </div>
+  </div>
+</div>

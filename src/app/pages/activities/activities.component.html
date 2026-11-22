@@ -1,0 +1,18 @@
+<app-page-banner title="Our Activities" description="Discover the initiatives through which Jeevan Foundation Trust aims to support vulnerable individuals, strengthen communities, and create opportunities for a better future."></app-page-banner>
+
+<section *ngFor="let activity of activities; let i = index" class="activity-section" [class.alt]="i % 2 === 1" appReveal>
+  <div class="container activity-grid">
+    <div class="activity-image-block" [appReveal]="i % 2 === 0 ? 'left' : 'right'">
+      <img [src]="activity.image" [alt]="activity.title" />
+    </div>
+    <div class="activity-copy" [appReveal]="i % 2 === 0 ? 'right' : 'left'" [revealDelay]="100">
+      <!-- <span class="section-kicker">Initiative {{ i + 1 }}</span> -->
+      <h2>{{ activity.title }}</h2>
+      <p>{{ activity.longDescription }}</p>
+      <ul>
+        <li *ngFor="let bullet of activity.bullets">{{ bullet }}</li>
+      </ul>
+      <a routerLink="/donate" class="primary-btn">Support This Initiative</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+.legal-section {
+  padding: 4rem 0;
+}
+
+.legal-box {
+  max-width: 820px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 18px 40px rgba(18, 75, 131, 0.06);
+}
+
+.legal-box h1 {
+  color: var(--deep-blue);
+  margin-bottom: 1rem;
+}
+
+.legal-box p {
+  color: var(--secondary-text);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
